@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max&min_2_numbers\\Homework001_max&min_2_numbers.csproj": {}
+    "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max_min_2_numbers\\Homework001_max&min_2_numbers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max&min_2_numbers\\Homework001_max&min_2_numbers.csproj": {
+    "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max_min_2_numbers\\Homework001_max&min_2_numbers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max&min_2_numbers\\Homework001_max&min_2_numbers.csproj",
+        "projectUniqueName": "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max_min_2_numbers\\Homework001_max&min_2_numbers.csproj",
         "projectName": "Homework001_max&min_2_numbers",
-        "projectPath": "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max&min_2_numbers\\Homework001_max&min_2_numbers.csproj",
+        "projectPath": "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max_min_2_numbers\\Homework001_max&min_2_numbers.csproj",
         "packagesPath": "C:\\Users\\Саша\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max&min_2_numbers\\obj\\",
+        "outputPath": "C:\\Users\\Саша\\Разное\\Обучение\\GeekBrains IT\\1 четверть\\4. Знакомство с языками программирования\\Урок 1\\Семинар\\Homework\\Homework001_max_min_2_numbers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Саша\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -6,9 +6,13 @@ int b = int.Parse(Console.ReadLine());
 
 if (a > b)
 {
-    Console.WriteLine("Число " + a + " больше чем " + b);
+    Console.WriteLine("Первое число " + a + " больше чем второе -  " + b);
+}
+else if (a == b)
+{
+    Console.WriteLine("Числа равны между собой");
 }
 else
 {
-    Console.WriteLine("Число " + b + " больше чем " + a);
+    Console.WriteLine("Второе число " + b + " больше чем первое -  " + a);
 }
