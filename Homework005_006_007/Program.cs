@@ -22,10 +22,10 @@
 void Third_Digit()
 {
     Console.WriteLine("Введите число: ");
-    int natural_number = int.Parse(Console.ReadLine());
-    if (natural_number >= 0)
+    int number = int.Parse(Console.ReadLine());
+    if (number >= 0)
     {
-        string number_text = Convert.ToString(natural_number);
+        string number_text = Convert.ToString(number);
         if (number_text.Length > 2)
         {
             Console.WriteLine("Третья цифра введенного числа: " + number_text[2]);
@@ -37,7 +37,7 @@ void Third_Digit()
     }
     else
     {
-        string number_text = Convert.ToString(natural_number);
+        string number_text = Convert.ToString(number);
         if (number_text.Length > 3)
         {
             Console.WriteLine("Третья цифра введенного числа: " + number_text[3]);
