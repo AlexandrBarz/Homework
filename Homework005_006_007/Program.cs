@@ -2,13 +2,20 @@
 {
     Console.WriteLine("Введите трехзначное число: ");
     int number = int.Parse(Console.ReadLine());
-    if (number > 100 && number < 1000)
+    if (number >= 100 && number < 1000)
     {
         Console.WriteLine("Вторая цифра введенного трехзначного числа: " + number / 10 % 10);
     }
     else
     {
-        Console.WriteLine("Введено не трехзначное число. Попробуйте снова.");
+        if (number <= -100 && number > -1000)
+        {
+            Console.WriteLine("Вторая цифра введенного трехзначного числа: " + (-number) / 10 % 10);
+        }
+        else
+        {
+            Console.WriteLine("Введено не трехзначное число. Попробуйте снова.");
+        }
     }
 }
 
@@ -79,6 +86,5 @@ while (true)
     {
         Day_Off();
     }
-    Console.WriteLine("Такого задания нет в списке. Выберите задание из списка.");
-    return;
+return;
 }
