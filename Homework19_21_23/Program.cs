@@ -1,32 +1,39 @@
-﻿int Palindrom(int num, int NumberOfFirstNumbers)
+﻿void Palindrom()
 {
-    while (num / Math.Pow(10, NumberOfFirstNumbers) > 1)
+    int a, InverseNumber = 0, number;
+    Console.WriteLine("Введите число для проверки: ");
+    int num = int.Parse(Console.ReadLine());
+    for (number = num; num != 0; num /= 10)
     {
-        num /= 10;
+        a = num % 10;
+        InverseNumber = InverseNumber * 10 + a;
     }
-
-    Console.WriteLine(num);
-    return num;
-
+    if (number == InverseNumber)
+    {
+        Console.WriteLine("Число " + number + " является палиндромом");
+    }
+    else
+    {
+        Console.WriteLine("Число " + number + " не является палиндромом");
+    }
 }
-//int number = int.Parse(Console.ReadLine());
-//if (number > 99)
-//{
-//  int x = number % 100;
-//int y = Palindrom(number, 2);
-//}
-//else if (number > 9)
-//{
-//  int x = number % 10;
-//int y = Palindrom(number, 1);
-//}
-//else
-//{
-//  Console.WriteLine("Введите число больше 9");
-//}
 
-Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите кол-во: ");
-int NumberOfFirstNumbers = int.Parse(Console.ReadLine());
-Palindrom(num, NumberOfFirstNumbers);
+Console.WriteLine("Введите номер задания 1, 2 или 3:");
+while (true)
+{
+    int exercise = int.Parse(Console.ReadLine());
+    if (exercise == 1)
+    {
+        Console.WriteLine("Программа для проверки числа - является оно палиндромом или нет.");
+        Palindrom();
+    }
+//    if (exercise == 2)
+//    {
+//        Third_Digit();
+//    }
+//    if (exercise == 3)
+//    {
+//        Day_Off();
+//    }
+return;
+}
