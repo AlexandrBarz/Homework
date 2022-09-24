@@ -3,6 +3,7 @@
     int a, InverseNumber = 0, number;
     Console.WriteLine("Введите число для проверки:");
     int num = int.Parse(Console.ReadLine());
+    if (num < 0) num *= -1;
     for (number = num; num != 0; num /= 10)
     {
         a = num % 10;
@@ -52,16 +53,18 @@ while (true)
     int exercise = int.Parse(Console.ReadLine());
     if (exercise == 1)
     {
-        Console.WriteLine("Программа для проверки числа - является оно палиндромом или нет.");
+        Console.WriteLine("Программа для проверки числа - является ли оно палиндромом или нет.");
         Palindrom();
     }
     if (exercise == 2)
     {
-        TableCube();
+        Console.WriteLine("Программа для расчета расстояния между 2-мя точками в 3D пространстве");
+        Distance();
     }
     if (exercise == 3)
     {
-        Distance();
+        Console.WriteLine("Программа для вычисления кубов от 1 до N");
+        TableCube();
     }
     return;
 }
