@@ -29,6 +29,22 @@ void TableCube()
         Console.Write(cub + " ");
     }
 }
+
+void Distance()
+{
+    double dist = 0;
+    Console.WriteLine("Введите координаты первой точки:");
+    int xa = int.Parse(Console.ReadLine());
+    int ya = int.Parse(Console.ReadLine());
+    int za = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты второй точки:");
+    int xb = int.Parse(Console.ReadLine());
+    int yb = int.Parse(Console.ReadLine());
+    int zb = int.Parse(Console.ReadLine());
+    dist = Math.Sqrt(Math.Pow((xb - xa), 2) + Math.Pow((yb - ya), 2) + Math.Pow((zb - za), 2));
+    Console.WriteLine("Расстояние между 2-мя точками = " + dist);
+}
+
 Console.WriteLine("Введите номер задания 1, 2 или 3:");
 
 while (true)
@@ -43,9 +59,9 @@ while (true)
     {
         TableCube();
     }
-    //    if (exercise == 3)
-    //    {
-    //        Day_Off();
-    //    }
+    if (exercise == 3)
+    {
+        Distance();
+    }
     return;
 }
