@@ -19,5 +19,13 @@ void PrintData(string msg, int value)
 
 int numberA = ReadData("Ввведите число А: ");
 int numberB = ReadData("Ввведите число B: ");
-int result = PowAtoB(numberA, numberB);
+int integer = Math.Truncate(numberB);
+if (numberB > 0 && (numberB - integer) == 0)
+{
+   int result = PowAtoB(numberA, numberB);
+}
+else
+{
+    Console.WriteLine("Введенное число для степени не является натуральным. Введите натуральное число");
+}
 PrintData("Итог возведения числа " + numberA + " в степень " + numberB + " равен ", result);
