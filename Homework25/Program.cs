@@ -1,8 +1,8 @@
 ﻿// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-int ReadData(string msg)
+double ReadData(string msg)
 {
     Console.Write(msg);
-    int number = int.Parse(Console.ReadLine() ?? "0");
+    double number = Convert.ToDouble(Console.ReadLine() ?? "0");
     return number;
 }
 
@@ -17,15 +17,17 @@ void PrintData(string msg, int value)
     Console.WriteLine(msg + value);
 }
 
-int numberA = ReadData("Ввведите число А: ");
-int numberB = ReadData("Ввведите число B: ");
-//double integer = Math.Truncate(numberB);
-//if (numberB > 0 && (numberB - integer) == 0)
-//{
-   int result = PowAtoB(numberA, numberB);
-//}
-//else
-//{
-//    Console.WriteLine("Введенное число для степени не является натуральным. Введите натуральное число");
-//}
-PrintData("Итог возведения числа " + numberA + " в степень " + numberB + " равен ", result);
+double numberA = ReadData("Ввведите число А: ");
+double numberB = ReadData("Ввведите число B: ");
+double integer = Math.Truncate(numberB);
+if ((numberB >= 1) && (numberB - integer) == 0)
+{
+    int intnumA = Convert.ToInt32(numberA);
+    int intnumB = Convert.ToInt32(numberB);
+    int result = PowAtoB(intnumA, intnumB);
+    PrintData("Итог возведения числа " + numberA + " в степень " + numberB + " равен ", result);
+}
+else
+{
+    Console.WriteLine("Введенное число " + numberB + " не является натуральным. Введите натуральное число!");
+}
