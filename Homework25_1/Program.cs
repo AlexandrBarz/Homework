@@ -6,52 +6,28 @@ double ReadData(string msg)
     return number;
 }
 
-Console.WriteLine(@"Выбирете арифмитическую операцию:
-    +  сложение
-    -  вычитание
-    *  умножение
-    /  деление
-    ^  возведение в степень");
-string oper = Console.ReadLine();
-if (oper != "+" && oper != "-" && oper != "*" && oper != "/" && oper != "^")
+void Calc(double FisrtVar, double SecondVar)
 {
-    Console.WriteLine("Данной операции нет в калькуляторе.");
-}
-else
-{
-    double c = 0;
-    double a = ReadData("Введите первое число: ");
-    double b = ReadData("Введите второе число: ");
-    if (oper == "+")
+    Console.WriteLine(@"Выбирете арифмитическую операцию:
+    + : сложение
+    - : вычитание
+    * : умножение
+    / : деление
+    ^ : возведение в степень");
+    string oper = Console.ReadLine();
+    while (oper == "+" || oper == "-" || oper == "*" || oper == "/" || oper == "^")
     {
-        Console.WriteLine($"Результат арифметической операции: {a} {oper} {b} = {a + b}");
-    }
-    else
-    {
-        if (oper == "-")
-        {
-            Console.WriteLine($"Результат арифметической операции: {a} {oper} {b} = {a - b}");
-        }
-        else
-        {
-            if (oper == "*")
-            {
-                Console.WriteLine($"Результат арифметической операции: {a} {oper} {b} = {a * b}");
-            }
-            else
-            {
-                if (oper == "/")
-                {
-                    Console.WriteLine($"Результат арифметической операции: {a} {oper} {b} = {a / b}");
-                }
-                else
-                {
-                    if (oper == "^")
-                    {
-                        Console.WriteLine($"Результат арифметической операции: {a} ^ {b} = {Math.Pow(a, b)}");
-                    }
-                }
-            }
-        }
+        double c = 0;
+        if (oper == "+") Console.WriteLine($"Результат арифметической операции: {FisrtVar} {oper} {SecondVar} = {FisrtVar + SecondVar}");
+        if (oper == "-") Console.WriteLine($"Результат арифметической операции: {FisrtVar} {oper} {SecondVar} = {FisrtVar - SecondVar}");
+        if (oper == "*") Console.WriteLine($"Результат арифметической операции: {FisrtVar} {oper} {SecondVar} = {FisrtVar * SecondVar}");
+        if (oper == "/") Console.WriteLine($"Результат арифметической операции: {FisrtVar} {oper} {SecondVar} = {FisrtVar / SecondVar}");
+        if (oper == "^") Console.WriteLine($"Результат арифметической операции: {FisrtVar} {oper} {SecondVar} = {Math.Pow(FisrtVar, SecondVar)}");
+        return;
+        Console.WriteLine("Данной операции нет в калькуляторе.");
     }
 }
+
+double a = ReadData("Введите первое число: ");
+double b = ReadData("Введите второе число: ");
+Calc(a, b);
