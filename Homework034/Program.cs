@@ -10,7 +10,7 @@ int[] FillArr(int len)
     int[] array = new int[len];
     for (int i = 0; i < len; i++)
     {
-        array[i] = new Random().Next(100, 999);
+        array[i] = new Random().Next(100, 1000);
     }
     return array;
 }
