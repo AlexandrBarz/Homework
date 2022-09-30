@@ -24,7 +24,7 @@ void PrintArr(int[] arr)
     Console.Write(arr[arr.Length - 1] + "]");
 }
 
-int arrlen = ReadData("Введите длину массива: ");
+int arrlen = 123;
 int lowbord = ReadData("Введите нижнюю границу чисел: ");
 int highbord = ReadData("Введите верхнюю границу чисел: ");
 int[] arr = FillArr(arrlen, lowbord, highbord);
