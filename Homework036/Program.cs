@@ -30,12 +30,9 @@ int highbord = ReadData("Введите верхнюю границу чисел
 int[] arr = FillArr(arrlen, lowbord, highbord);
 PrintArr(arr);
 int sum = 0;
-for (int i = 0; i < arrlen; i++)
+for (int i = 1; i < arrlen; i += 2)
 {
-    if (i % 2 != 0)
-    {
-        sum = sum + arr[i];
-    }
+    sum = sum + arr[i];
 }
 Console.WriteLine(" ");
 Console.WriteLine("Сумма элементов в заданном массиве, стоящих на нечетных позициях: " + sum);
