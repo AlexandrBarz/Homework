@@ -7,7 +7,6 @@ int ReadData(string msg)
 }
 double[] FillArr(int len, int lowbord, int highbord)
 {
-    //using Random = System.Random;
     double[] array = new double[len];
     for (int i = 0; i < len; i++)
     {
@@ -45,7 +44,8 @@ for (int i = 1; i < arrlen; i++)
         i++;
     }
 }
-double diff = max - min;
+double diff = 0;
+diff = max - min;
 Console.WriteLine(" ");
 Console.WriteLine($"Разница между max {max} и min {min} элементами массива = {diff}");
 Console.ReadKey();
