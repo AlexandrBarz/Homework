@@ -1,6 +1,6 @@
 ﻿//  Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 Console.Clear();
-Console.WriteLine(@"Нахождение точки пересечения 2-ух прямых, заданных уравнениями,
+Console.WriteLine(@"Нахождение точки пересечения 2-ух прямых, заданных уравнениями:
             y = k1 * x + b1
             y = k2 * x +b2");
 Console.WriteLine();
@@ -12,9 +12,9 @@ Console.Write("Введите значение b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите значение k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
-//double xpoint = 0;
-//double ypoint = 0;
 double xpoint = (b2 - b1) / (k1 - k2);
 double ypoint = k1 * xpoint + b1;
-Console.WriteLine($"Координаты точки пересечения 2-х прямых {xpoint}, {ypoint}");
+xpoint = Math.Round(xpoint, 2);
+ypoint = Math.Round(ypoint, 2);
+Console.WriteLine($"Координаты точки A пересечения 2-х прямых ({xpoint}; {ypoint})");
 Console.ReadKey();
