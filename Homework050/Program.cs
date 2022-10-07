@@ -2,11 +2,10 @@
 int ReadData(string msg)
 {
     Console.Write(msg);
-    int number = int.Parse(Console.ReadLine() ?? "0");
-    return number;
+    return Convert.ToInt32(Console.ReadLine());
 }
 
-int[,] GetArray(int row, int column, int lowbord, int highbord)
+int[,] FillArray(int row, int column, int lowbord, int highbord)
 {
     int[,] array = new int[row, column];
     for (int i = 0; i < row; i++)
@@ -19,13 +18,13 @@ int[,] GetArray(int row, int column, int lowbord, int highbord)
     return array;
 }
 
-void PrintArray(int[,] randomarray)
+void PrintArray(int[,] array)
 {
-    for (int i = 0; i < randomarray.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < randomarray.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{randomarray[i, j]}\t");
+            Console.Write($"{array[i, j]}\t");
         }
         Console.WriteLine();
     }
@@ -35,17 +34,17 @@ int row = ReadData("Введите кол-во строк в массиве: ");
 int column = ReadData("Введите кол-во столбцов в массиве: ");
 int lowbord = ReadData("Введите нижнюю границу диапазона чисел для заполнения массива: ");
 int highbord = ReadData("Введите верхнюю границу диапазона чисел для заполнения массива: ");
-int[,] newarray = GetArray(row, column, lowbord, highbord);
+int[,] newarray = FillArray(row, column, lowbord, highbord);
 PrintArray(newarray);
-int i = ReadData("Введите номер строки: ");
-int j = ReadData("Введите номер столбца: ");
-if (i > (row - 1) && j > (column - 1))
+Console.WriteLine("Для выбора элемента введите следующие данные: ");
+int indexrow = ReadData("\t1. номер строки: ")-1;
+int indexcolumn = ReadData("\t2. номер столбца: ")-1;
+if (indexrow < newarray.GetLength(0) && indexcolumn < newarray.GetLength(1))
 {
-    Console.WriteLine($"Массив меньше введенных парfметров и элемента {newarray[i, j]} не существует");
+    Console.WriteLine($"Значение элемента на указанной позиции newarray[{indexrow},{indexcolumn}]: {newarray[indexrow, indexcolumn]}");
 }
 else
 {
-    int element = newarray[i - 1, j - 1];
-    ReadData($"Значение элемента на указанной позиции: {element}");
+    Console.WriteLine($"Элемента с индексом [{indexrow},{indexcolumn}] не существует в данном массиве");
 }
 Console.ReadKey();
