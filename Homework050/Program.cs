@@ -41,7 +41,7 @@ int indexrow = ReadData("\t1. номер строки: ")-1;
 int indexcolumn = ReadData("\t2. номер столбца: ")-1;
 if (indexrow < newarray.GetLength(0) && indexcolumn < newarray.GetLength(1))
 {
-    Console.WriteLine($"Значение элемента на указанной позиции newarray[{indexrow},{indexcolumn}]: {newarray[indexrow, indexcolumn]}");
+    Console.WriteLine($"Значение элемента на указанной позиции newarray [{indexrow},{indexcolumn}]: {newarray[indexrow, indexcolumn]}");
 }
 else
 {
