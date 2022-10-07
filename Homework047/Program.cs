@@ -1,26 +1,22 @@
 ﻿//Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-// double GetRandomNumber(double minimum, double maximum)
-// {
-
-//     return Math.Round(new Random().NextDouble() * (maximum - minimum) + minimum, 1);
-// }
-
-
-
-
-// Console.WriteLine("Укажите диапазон чисел для заполнения массива");
-
-int maximum = 10;
-
-Console.WriteLine("Введите количестов строк в массиве: ");
-Console.WriteLine("Введите количество столбцов в массиве: ");
-
-double[,] doubarray = new double[,];
-for (i = 0; i < doubarray.GetLength(0); i++)
+int ReadData(string msg)
 {
-    for (j = 0; j < doubarray.GetLength(1); j++)
+    Console.Write(msg);
+    int number = int.Parse(Console.ReadLine() ?? "0");
+    return number;
+}
+
+int row = ReadData("Введите количестов строк в массиве: ");
+int column = ReadData("Введите количество столбцов в массиве: ");
+int minimum = ReadData("Укажите нижнюю границу диапазона чисел для заполнения массива: ");
+int maximum = ReadData("Укажите нижнюю верхнюю границу диапазона чисел для заполнения массива: ");
+double[,] doubarray = new double[row, column];
+for (int i = 0; i < row; i++)
+{
+    for (int j = 0; j < column; j++)
     {
-        doubarray[i,j]=Math.Round(new Random().NextDouble() * (maximum - minimum) + minimum, 1);
-        Console.WriteLine(doubarray[j,j]=);
+        doubarray[i, j] = Math.Round(new Random().NextDouble() * (maximum - minimum) + minimum, 1);
+        Console.Write($"{doubarray[i, j]} \t");
     }
+    Console.WriteLine();
 }
