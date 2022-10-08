@@ -30,9 +30,25 @@ void PrintArray(int[,] array)
     }
 }
 
+double ArithMean(double x, int value)
+{
+    int couvant=0;
+}
+
 int row = ReadData("Введите кол-во строк в массиве: ");
 int column = ReadData("Введите кол-во столбцов в массиве: ");
 int lowbord = ReadData("Введите нижнюю границу диапазона чисел для заполнения массива: ");
 int highbord = ReadData("Введите верхнюю границу диапазона чисел для заполнения массива: ");
 int[,] newarray = FillArray(row, column, lowbord, highbord);
 PrintArray(newarray);
+double arithmean = 0;
+int count = 0;
+for (column = 0; column < newarray.GetLength(1); column++)
+{
+    for (row = 0; row < newarray.GetLength(0); row++)
+    {
+        count++;
+        arithmean = arithmean + newarray[column, row] / count;
+        Console.WriteLine($"Среденефрифметическое {column} столбца = {arithmean}");
+    }
+}
