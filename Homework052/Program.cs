@@ -30,25 +30,18 @@ void PrintArray(int[,] array)
     }
 }
 
-double ArithMean(double x, int value)
-{
-    int couvant=0;
-}
-
-int row = ReadData("Введите кол-во строк в массиве: ");
-int column = ReadData("Введите кол-во столбцов в массиве: ");
+int rows = ReadData("Введите кол-во строк в массиве: ");
+int columns = ReadData("Введите кол-во столбцов в массиве: ");
 int lowbord = ReadData("Введите нижнюю границу диапазона чисел для заполнения массива: ");
 int highbord = ReadData("Введите верхнюю границу диапазона чисел для заполнения массива: ");
-int[,] newarray = FillArray(row, column, lowbord, highbord);
+int[,] newarray = FillArray(rows, columns, lowbord, highbord);
 PrintArray(newarray);
-double arithmean = 0;
-int count = 0;
-for (column = 0; column < newarray.GetLength(1); column++)
+for (columns = 0; columns < newarray.GetLength(1); columns++)
 {
-    for (row = 0; row < newarray.GetLength(0); row++)
+    double arithmean = 0;
+    for (rows = 0; rows < newarray.GetLength(0); rows++)
     {
-        count++;
-        arithmean = arithmean + newarray[column, row] / count;
-        Console.WriteLine($"Среденефрифметическое {column} столбца = {arithmean}");
+        arithmean += newarray[rows, columns];
     }
+    Console.WriteLine($"Среденефрифметическое {columns + 1} столбца = {arithmean / newarray.GetLength(0)}");
 }
