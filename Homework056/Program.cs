@@ -33,7 +33,7 @@ void PrintArray(int[,] array)
 void MinSumElements(int[,] array)
 {
     int minsum = Int32.MaxValue;
-    int index = 0;
+    int numberrow = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         int sumrow = 0;
@@ -45,10 +45,10 @@ void MinSumElements(int[,] array)
         if (sumrow < minsum)
         {
             minsum = sumrow;
-            index = i+1;
+            numberrow = i + 1;
         }
     }
-    Console.WriteLine($"Строка с наименьшей суммой элементов под номером {index}");
+    Console.WriteLine($"Строка с наименьшей суммой элементов под номером {numberrow}");
 }
 
 int rows = ReadData("Введите кол-во строк в массиве: ");
@@ -58,3 +58,4 @@ int highbord = ReadData("Введите верхнюю границу диапа
 int[,] newarray = FillArray(rows, columns, lowbord, highbord);
 PrintArray(newarray);
 MinSumElements(newarray);
+Console.ReadKey();
