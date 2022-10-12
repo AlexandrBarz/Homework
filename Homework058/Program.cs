@@ -68,5 +68,5 @@ if (columns1 == rows2)
 else
 {
     Console.WriteLine("Матрицы нельзя перемножить.");
-    Console.ReadKey();
+    
 }
