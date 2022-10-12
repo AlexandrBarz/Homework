@@ -15,6 +15,9 @@ int[,,] FillArray(int lowbord, int highbord)
             for (int k = 0; k < array.GetLength(2); k++)
             {
                 array[i, j, k] = new Random().Next(lowbord, highbord + 1);
+                // int temp = array[i, j, k];
+                // if (temp == array[i, j, k]) 
+                // Console.WriteLine(temp);
             }
         }
     }
@@ -39,4 +42,7 @@ void PrintArray(int[,,] array)
     Console.WriteLine();
 }
 
-PrintArray(FillArray(0, 9));
+int lowbord = ReadData("Введите нижнюю границу диапазона чисел для заполнения массива: ");
+int highbord = ReadData("Введите верхнюю границу диапазона чисел для заполнения массива: ");
+PrintArray(FillArray(lowbord, highbord));
+Console.ReadKey();
