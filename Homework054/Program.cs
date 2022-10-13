@@ -54,7 +54,11 @@ int columns = ReadData("Введите кол-во столбцов в масс�
 int lowbord = ReadData("Введите нижнюю границу диапазона чисел для заполнения массива: ");
 int highbord = ReadData("Введите верхнюю границу диапазона чисел для заполнения массива: ");
 int[,] newarray = FillArray(rows, columns, lowbord, highbord);
+Console.WriteLine(@"
+Исходный массив:");
 PrintArray(newarray);
 SortArray(newarray);
-Console.WriteLine();
+Console.WriteLine(@"
+Отсортированный массив:");
 PrintArray(newarray);
+Console.ReadKey();
