@@ -23,12 +23,15 @@ int[,] SpiralArray(int row, int column)
         else if (i == row - iend - 1 && j > jbeg) j--;
         else i--;
         if ((i == ibeg + 1) && (j == jbeg) && (jbeg != column - jend - 1))
-        ibeg++;
-        iend++;
-        jbeg++;
-        jend++;
+        {
+            ibeg++;
+            iend++;
+            jbeg++;
+            jend++;
+        }
+        k++;
     }
-    k++;
+    
     return array;
 }
 
