@@ -37,7 +37,8 @@ void PrintArray(int[,,] array)
     Console.WriteLine();
 }
 
-int lowbord = ReadData("Введите нижнюю границу диапазона чисел для заполнения массива: ");
-int highbord = ReadData("Введите верхнюю границу диапазона чисел для заполнения массива: ");
-PrintArray(FillArray(lowbord, highbord));
+int lowbord = ReadData("Введите нижнюю границу диапазона двухзначных чисел для заполнения массива: ");
+int highbord = ReadData("Введите верхнюю границу диапазона двухзначных чисел для заполнения массива: ");
+if (lowbord > 9 && highbord < 100) PrintArray(FillArray(lowbord, highbord));
+else Console.WriteLine("Неверно введен диапазон. Попробуйте снова");
 Console.ReadKey();
