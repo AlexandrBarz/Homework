@@ -5,6 +5,21 @@ int ReadData(string msg)
     return Convert.ToInt32(Console.ReadLine());
 }
 
+bool FindElement(int element, int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int z = 0; z < array.GetLength(2); z++)
+            {
+                if (array[i, j, z] == element) return true;
+            }
+        }
+    }
+    return false;
+}
+
 int[,,] FillArray(int lowbord, int highbord)
 {
     int[,,] array = new int[2, 2, 2];
@@ -12,9 +27,15 @@ int[,,] FillArray(int lowbord, int highbord)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            int k = 0;
+            while (k < array.GetLength(2))
             {
-                array[i, j, k] = new Random().Next(lowbord, highbord + 1);
+                int rnd = new Random().Next(lowbord, highbord + 1);
+                if (!FindElement(rnd, array))
+                {
+                    array[i, j, k] = rnd;
+                    k++;
+                }
             }
         }
     }
