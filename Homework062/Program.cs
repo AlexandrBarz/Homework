@@ -31,7 +31,6 @@ int[,] SpiralArray(int row, int column)
         }
         k++;
     }
-    
     return array;
 }
 
