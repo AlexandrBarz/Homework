@@ -9,7 +9,7 @@ void NaturalNumbers(int n)
 {
     if (n < 0)
     {
-        Console.WriteLine($"{n} не является натуральным числом");
+        Console.WriteLine($"Число {n} не является натуральным числом");
         return;
     }
     if (n == 0) return;
@@ -18,7 +18,6 @@ void NaturalNumbers(int n)
 }
 
 int n = ReadData("Введите натуральное число N: ");
-if (n == 0) return; // для того, чтобы при вводе в терминале 0 не выводился текст 22 строки
-Console.WriteLine($"Наруральные числа от {n} до 1");
+Console.WriteLine($"Наруральные числа от {n} до 1:");
 NaturalNumbers(n);
 Console.ReadKey();
