@@ -1,44 +1,18 @@
 ﻿// Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-int ReadData(string msg)
+void SummaElements(int m, int n, int sum)
 {
-    Console.Write(msg);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-int SummaElements(int[] elements)
-{
-    int sum = 0;
-    for (int i = 0; i < elements.Length; i++)
+    if (m > n)
     {
-        sum = sum + elements[i];
+        Console.WriteLine($"Сумма элементов в промежутке от {m} до {n} = {sum}");
+        return;
     }
-    return sum;
+    sum = sum + (m++);
+    SummaElements(m, n, sum);
 }
-
-int[] FillArr(int lowbord, int highbord)
-{
-    int[] array = new int[(highbord + 1) - lowbord];
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = lowbord;
-        lowbord++;
-    }
-    return array;
-}
-
-void PrintArr(int[] arr)
-{
-    for (int i = 0; i < arr.Length - 1; i++)
-    {
-        Console.Write(arr[i] + ", ");
-    }
-    Console.Write(arr[arr.Length - 1]);
-}
-
-int m = ReadData("Введите нижнюю границу диапазона натуральных чисел: ");
-int n = ReadData("Введите верхнюю границу диапазона натуральных чисел: ");
-int[] array = FillArr(m, n);
-PrintArr(array);
-Console.WriteLine();
-Console.WriteLine($"Сумма элементов в промежутке от {m} до {n} = {SummaElements(array)}");
+Console.Write("Введите натуральное число M: ");
+int m = int.Parse(Console.ReadLine() ?? "0");
+Console.Write("Введите натуральное число N: ");
+int n = int.Parse(Console.ReadLine() ?? "0");
+int sum = 0;
+SummaElements(m, n, sum);
 Console.ReadKey();
